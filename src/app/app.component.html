@@ -1,1 +1,10 @@
-<!-- TODO -->
+<mat-drawer-container class="app-container" autosize>
+    <mat-drawer #appNav class="app-sidenav" mode="over">
+        This is the sidenav.
+    </mat-drawer>
+
+    <div class="app-sidenav-content">
+        <dh-cc-nav (menuBtnClickedEvent)="appNav.toggle()"></dh-cc-nav>
+    </div>
+
+</mat-drawer-container>
