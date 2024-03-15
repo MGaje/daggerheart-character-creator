@@ -3,6 +3,21 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
+    "baseUrl": "src",
+    "paths": {
+        "@classes/*": [
+            "app/classes/*"
+        ],
+        "@enums/*": [
+            "app/enums/*"
+        ],
+        "@enums": [
+            "app/enums/index.ts"
+        ],
+        "@classes": [
+            "app/classes/index.ts"
+        ]
+    },
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,

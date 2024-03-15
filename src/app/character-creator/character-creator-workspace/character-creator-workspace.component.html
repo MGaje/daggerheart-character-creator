@@ -1,0 +1,13 @@
+@switch (mode) {
+    @case (WorkspaceModes.ViewingList) {
+        <dh-cc-character-creator-workspace-view-list (createCharacterBtnClickedEvent)="changeModeToCreating()"></dh-cc-character-creator-workspace-view-list>
+    }
+
+    @case (WorkspaceModes.Creating) {
+        <dh-cc-character-creator-workspace-create></dh-cc-character-creator-workspace-create>
+    }
+
+    @default {
+        <div color="warn">Unknown workspace mode.</div>
+    }
+}
