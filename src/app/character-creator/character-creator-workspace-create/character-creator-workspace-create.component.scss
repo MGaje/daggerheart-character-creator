@@ -1,0 +1,40 @@
+.workspace-create-container {
+}
+
+.step-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-container {
+    margin: 16px 0;
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+
+    mat-form-field {
+        &#character-name-field {
+            width: 500px;
+        }
+
+        &#pronouns-field {
+            width: 300px;
+        }
+
+        &:not(:first-child) {
+            margin-left: 8px;
+        }
+    }
+}
+
+.step-footer {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+
+    mat-divider {
+        margin: 16px 0;
+        flex-basis: 100%;
+    }
+}
