@@ -5,50 +5,19 @@
             <ng-template matStepLabel>Basic Info</ng-template>
             <ng-template matStepContent>
 
-                <div class="step-container">
-
-                    <div class="form-container">
-
-                        <form [formGroup]="basicInfoFormGroup">
-
-                            <mat-form-field id="character-name-field">
-                                <mat-label>Name</mat-label>
-                                <input id="character-name-input" matInput placeholder="Character Name"
-                                    formControlName="name" required>
-                            </mat-form-field>
-
-                            <mat-form-field id="pronouns-field">
-                                <mat-label>Pronouns</mat-label>
-                                <input id="pronouns-input" matInput placeholder="He/Him, She/Her, They/Them, etc"
-                                    formControlName="pronouns" required>
-                            </mat-form-field>
-
-                        </form>
-
-                    </div>
-
-                    <div class="step-footer">
-                        <mat-divider></mat-divider>
-                        <button mat-button matStepperNext>Next</button>
-                    </div>
-
-                </div>
+                <dh-cc-basic-info-step [formGroup]="basicInfoFormGroup"></dh-cc-basic-info-step>
 
             </ng-template>
 
         </mat-step>
 
-        <mat-step>
+        <mat-step [stepControl]="classFormGroup">
 
             <ng-template matStepLabel>Class</ng-template>
             <ng-template matStepContent>
-                <div class="step-container">
-                    <div>Choosing your class!</div>
-                    <mat-divider></mat-divider>
-                    <div>
-                        <button mat-button matStepperNext>Next</button>
-                    </div>
-                </div>
+                
+                <dh-cc-class-step [formGroup]="classFormGroup"></dh-cc-class-step>
+
             </ng-template>
 
         </mat-step>

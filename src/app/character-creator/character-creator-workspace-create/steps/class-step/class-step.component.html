@@ -1,0 +1,66 @@
+<div class="step-container">
+
+    <div class="form-container">
+
+        <form [formGroup]="formGroup!">
+
+            <!-- <mat-form-field id="character-name-field">
+                <mat-label>Name</mat-label>
+                <input id="character-name-input" matInput placeholder="Character Name" formControlName="name" required>
+            </mat-form-field>
+
+            <mat-form-field id="pronouns-field">
+                <mat-label>Pronouns</mat-label>
+                <input id="pronouns-input" matInput placeholder="He/Him, She/Her, They/Them, etc"
+                    formControlName="pronouns" required>
+            </mat-form-field> -->
+
+            <div class="class-selection-container">
+                <div class="class-selection-item-container" [class.selected]="isSelected(CharacterClasses.Bard)" (click)="selectClass(CharacterClasses.Bard)">
+                    <img class="class-selection-item" src="/assets/images/classes/bard.webp" alt="Bard Image" />
+                </div>
+                
+                <div class="class-selection-item-container" [class.selected]="isSelected(CharacterClasses.Druid)" (click)="selectClass(CharacterClasses.Druid)">
+                    <img class="class-selection-item" src="/assets/images/classes/druid.webp" alt="Druid Image" />
+                </div>
+
+                <div class="class-selection-item-container" [class.selected]="isSelected(CharacterClasses.Guardian)" (click)="selectClass(CharacterClasses.Guardian)">
+                    <img class="class-selection-item" src="/assets/images/classes/guardian.webp" alt="Guardian Image" />
+                </div>
+
+                <div class="class-selection-item-container" [class.selected]="isSelected(CharacterClasses.Ranger)" (click)="selectClass(CharacterClasses.Ranger)">
+                    <img class="class-selection-item" src="/assets/images/classes/ranger.webp" alt="Ranger Image" />
+                </div>
+
+                <div class="class-selection-item-container" [class.selected]="isSelected(CharacterClasses.Rogue)" (click)="selectClass(CharacterClasses.Rogue)">
+                    <img class="class-selection-item" src="/assets/images/classes/rogue.webp" alt="Rogue Image" />
+                </div>
+
+                <div class="class-selection-item-container" [class.selected]="isSelected(CharacterClasses.Seraph)" (click)="selectClass(CharacterClasses.Seraph)">
+                    <img class="class-selection-item" src="/assets/images/classes/seraph.webp" alt="Seraph Image" />
+                </div>
+
+                <div class="class-selection-item-container" [class.selected]="isSelected(CharacterClasses.Sorceror)" (click)="selectClass(CharacterClasses.Sorceror)">
+                    <img class="class-selection-item" src="/assets/images/classes/sorceror.webp" alt="Sorceror Image" />
+                </div>
+
+                <div class="class-selection-item-container" [class.selected]="isSelected(CharacterClasses.Warrior)" (click)="selectClass(CharacterClasses.Warrior)">
+                    <img class="class-selection-item" src="/assets/images/classes/warrior.webp" alt="Warrior Image" />
+                </div>
+
+                <div class="class-selection-item-container" [class.selected]="isSelected(CharacterClasses.Wizard)" (click)="selectClass(CharacterClasses.Wizard)">
+                    <img class="class-selection-item" src="/assets/images/classes/wizard.webp" alt="Wizard Image" />
+                </div>
+            </div>
+            
+        </form>
+
+    </div>
+
+    <div class="step-footer">
+        <mat-divider></mat-divider>
+        <button mat-button matStepperPrevious>Previous</button>
+        <button mat-button matStepperNext>Next</button>
+    </div>
+
+</div>

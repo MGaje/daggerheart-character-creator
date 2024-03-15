@@ -1,0 +1,27 @@
+<div class="step-container">
+
+    <div class="form-container">
+
+        <form [formGroup]="formGroup!">
+
+            <mat-form-field id="character-name-field">
+                <mat-label>Name</mat-label>
+                <input id="character-name-input" matInput placeholder="Character Name" formControlName="name" required>
+            </mat-form-field>
+
+            <mat-form-field id="pronouns-field">
+                <mat-label>Pronouns</mat-label>
+                <input id="pronouns-input" matInput placeholder="He/Him, She/Her, They/Them, etc"
+                    formControlName="pronouns" required>
+            </mat-form-field>
+
+        </form>
+
+    </div>
+
+    <div class="step-footer">
+        <mat-divider></mat-divider>
+        <button mat-button matStepperNext>Next</button>
+    </div>
+
+</div>

@@ -13,13 +13,17 @@ import { CharacterCreatorComponent } from './character-creator/character-creator
 import { CharacterCreatorWorkspaceComponent } from './character-creator-workspace/character-creator-workspace.component';
 import { CharacterCreatorWorkspaceViewListComponent } from './character-creator-workspace-view-list/character-creator-workspace-view-list.component';
 import { CharacterCreatorWorkspaceCreateComponent } from './character-creator-workspace-create/character-creator-workspace-create.component';
+import { BasicInfoStepComponent } from './character-creator-workspace-create/steps/basic-info-step/basic-info-step.component';
+import { ClassStepComponent } from './character-creator-workspace-create/steps/class-step/class-step.component';
 
 @NgModule({
     declarations: [
         CharacterCreatorComponent,
         CharacterCreatorWorkspaceComponent,
         CharacterCreatorWorkspaceViewListComponent,
-        CharacterCreatorWorkspaceCreateComponent
+        CharacterCreatorWorkspaceCreateComponent,
+        BasicInfoStepComponent,
+        ClassStepComponent
     ],
     imports: [
         CommonModule,

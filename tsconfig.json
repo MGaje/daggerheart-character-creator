@@ -11,11 +11,17 @@
         "@enums/*": [
             "app/enums/*"
         ],
+        "@interfaces/*": [
+            "app/interfaces/*"
+        ],
         "@enums": [
             "app/enums/index.ts"
         ],
         "@classes": [
             "app/classes/index.ts"
+        ],
+        "@interfaces": [
+            "app/interfaces/index.ts"
         ]
     },
     "forceConsistentCasingInFileNames": true,
