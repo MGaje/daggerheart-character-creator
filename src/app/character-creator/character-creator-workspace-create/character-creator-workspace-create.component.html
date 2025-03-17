@@ -22,18 +22,13 @@
 
         </mat-step>
 
-        <mat-step>
+        <mat-step [stepControl]="foundationFormGroup">
 
-            <ng-template matStepLabel>Subclass</ng-template>
+            <ng-template matStepLabel>Foundation</ng-template>
             <ng-template matStepContent>
-                <div class="step-container">
-                    <div>Chooising your subclass!</div>
-                    <mat-divider></mat-divider>
-                    <div>
-                        <button mat-button matStepperPrevious>Back</button>
-                        <button mat-button matStepperNext>Next</button>
-                    </div>
-                </div>
+                
+                <dh-cc-subclass-step [formGroup]="foundationFormGroup" [characterClass]="getSelectedClass()"></dh-cc-subclass-step>
+
             </ng-template>
 
         </mat-step>

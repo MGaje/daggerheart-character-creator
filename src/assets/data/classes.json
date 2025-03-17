@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "name": "bard",
+        "label": "Bard"
+    },
+    {
+        "id": 2,
+        "name": "druid",
+        "label": "Druid"
+    },
+    {
+        "id": 3,
+        "name": "guardian",
+        "label": "Guardian"
+    },
+    {
+        "id": 4,
+        "name": "ranger",
+        "label": "Ranger"
+    },
+    {
+        "id": 5,
+        "name": "rogue",
+        "label": "Rogue"
+    },
+    {
+        "id": 6,
+        "name": "seraph",
+        "label": "Seraph"
+    },
+    {
+        "id": 7,
+        "name": "sorceror",
+        "label": "Sorceror"
+    },
+    {
+        "id": 8,
+        "name": "warrior",
+        "label": "Warrior"
+    },
+    {
+        "id": 9,
+        "name": "wizard",
+        "label": "Wizard"
+    }
+]

@@ -1,4 +1,4 @@
-export enum CharacterCreatorWorkspaceMode {
+export enum CharacterCreatorWorkspaceModeEnum {
     Unknown = 0,
     ViewingList,
     Creating,

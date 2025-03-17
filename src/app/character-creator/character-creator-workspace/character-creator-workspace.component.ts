@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CharacterCreatorWorkspaceMode } from '@enums';
+import { CharacterCreatorWorkspaceModeEnum } from '@enums';
 
 @Component({
     selector: 'dh-cc-character-creator-workspace',
@@ -8,19 +8,19 @@ import { CharacterCreatorWorkspaceMode } from '@enums';
 })
 export class CharacterCreatorWorkspaceComponent {
     @Input()
-    public mode: CharacterCreatorWorkspaceMode = CharacterCreatorWorkspaceMode.Unknown;
+    public mode: CharacterCreatorWorkspaceModeEnum = CharacterCreatorWorkspaceModeEnum.Unknown;
 
-    public WorkspaceModes: typeof CharacterCreatorWorkspaceMode = CharacterCreatorWorkspaceMode;
+    public WorkspaceModes: typeof CharacterCreatorWorkspaceModeEnum = CharacterCreatorWorkspaceModeEnum;
 
     constructor() {
         // Empty.
     }
 
-    public changeMode(newMode: CharacterCreatorWorkspaceMode) {
+    public changeMode(newMode: CharacterCreatorWorkspaceModeEnum) {
         this.mode = newMode;
     }
 
     public changeModeToCreating() {
-        this.mode = CharacterCreatorWorkspaceMode.Creating;
+        this.mode = CharacterCreatorWorkspaceModeEnum.Creating;
     }
 }

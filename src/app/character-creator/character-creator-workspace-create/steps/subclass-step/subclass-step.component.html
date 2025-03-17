@@ -1,18 +1,12 @@
 <div class="step-container">
 
     <div class="form-container">
-
-        @if (classes$ | async; as classes) {
-        <form [formGroup]="formGroup!">
-
-            <dh-cc-item-selection assetDir="/assets/images/classes" ext="webp" [items]="classes" (selectedItemEvent)="selectClass($event)"></dh-cc-item-selection>
-            
-        </form>
+        @if (foundations$ | async; as foundations) {
+        <dh-cc-item-selection assetDir="/assets/images/foundations" [items]="foundations" (selectedItemEvent)="selectFoundation($event)"></dh-cc-item-selection>
         }
         @else {
         <dh-cc-loading></dh-cc-loading>
         }
-
     </div>
 
     <div class="step-footer">

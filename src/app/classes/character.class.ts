@@ -1,5 +1,5 @@
 
-import { CharacterClass, CharacterSubclass } from '@enums';
+import { CharacterClassEnum, CharacterSubclassEnum } from '@enums';
 
 /**
  * Daggerheart Character.
@@ -10,8 +10,8 @@ export class Character {
     public pronouns: string | undefined;
     public level: number = 1;
 
-    public class: CharacterClass = CharacterClass.Unknown;
-    public subclass: CharacterSubclass = CharacterSubclass.Unknown;
+    public class: CharacterClassEnum = CharacterClassEnum.Unknown;
+    public subclass: CharacterSubclassEnum = CharacterSubclassEnum.Unknown;
 
     constructor() {
         // Empty.

@@ -1,25 +1,35 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
-import { CharacterClass } from '@enums';
-import { WorkspaceCreateClassForm } from '@interfaces';
+import { ClassService } from '@character-creator/services';
+import { CharacterClass } from '@classes';
+import { CharacterClassEnum } from '@enums';
+import { Identifiable, WorkspaceCreateClassForm } from '@interfaces';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'dh-cc-class-step',
     templateUrl: './class-step.component.html',
     styleUrl: './class-step.component.scss'
 })
-export class ClassStepComponent {
+export class ClassStepComponent implements OnInit {
     
     @Input() public formGroup?: FormGroup<WorkspaceCreateClassForm>;
-    public CharacterClasses: typeof CharacterClass = CharacterClass;        
-
-    public selectClass(characterClass: CharacterClass) {
-        this.getClassControl().setValue(characterClass);
+    public CharacterClasses: typeof CharacterClassEnum = CharacterClassEnum;
+    public classes$!: Observable<CharacterClass[]>;    
+    
+    constructor(
+        private readonly classService: ClassService
+    ) {
+        // Empty.
     }
 
-    public isSelected(characterClass: CharacterClass) {
-        return this.getClassControl().getRawValue() === characterClass;
+    public ngOnInit(): void {
+        this.classes$ = this.classService.getClasses();
+    }
+
+    public selectClass(characterClass: Identifiable) {
+        this.getClassControl().setValue(characterClass.id);
     }
 
     public getClassControl(): FormControl {

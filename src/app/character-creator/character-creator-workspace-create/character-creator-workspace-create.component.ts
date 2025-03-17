@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { CharacterClass } from '@enums';
+import { CharacterClassEnum } from '@enums';
 import {
     WorkspaceCreateBasicInfoForm,
-    WorkspaceCreateClassForm
+    WorkspaceCreateClassForm,
+    WorkspaceCreateFoundationForm
 } from '@interfaces';
 
 @Component({
@@ -18,6 +19,19 @@ export class CharacterCreatorWorkspaceCreateComponent implements OnInit {
         // Empty.
     }
 
+    public basicInfoFormGroup: FormGroup<WorkspaceCreateBasicInfoForm> = this.fb.group<WorkspaceCreateBasicInfoForm>({
+        'name': this.fb.nonNullable.control('', Validators.required),
+        'pronouns': this.fb.nonNullable.control('', Validators.required),
+    });
+
+    public classFormGroup: FormGroup<WorkspaceCreateClassForm> = this.fb.group<WorkspaceCreateClassForm>({
+        'class': this.fb.nonNullable.control(undefined, Validators.required)
+    });
+
+    public foundationFormGroup: FormGroup<WorkspaceCreateFoundationForm> = this.fb.group<WorkspaceCreateFoundationForm>({
+        'foundation': this.fb.nonNullable.control(undefined, Validators.required)
+    });
+
     public ngOnInit(): void {
         // this.basicInfoFormGroup.valueChanges.subscribe(value => {
         //     console.log(value);
@@ -28,12 +42,7 @@ export class CharacterCreatorWorkspaceCreateComponent implements OnInit {
         });
     }
 
-    public basicInfoFormGroup: FormGroup<WorkspaceCreateBasicInfoForm> = this.fb.group<WorkspaceCreateBasicInfoForm>({
-        'name': this.fb.nonNullable.control('', Validators.required),
-        'pronouns': this.fb.nonNullable.control('', Validators.required),
-    });
-
-    public classFormGroup: FormGroup<WorkspaceCreateClassForm> = this.fb.group<WorkspaceCreateClassForm>({
-        'class': this.fb.nonNullable.control(undefined, Validators.required)
-    });
+    public getSelectedClass(): CharacterClassEnum {
+        return this.classFormGroup.controls.class.getRawValue()!;
+    }
 }

@@ -1,4 +1,4 @@
-export enum CharacterClass {
+export enum CharacterClassEnum {
     Unknown = 0,
     Bard,
     Druid,

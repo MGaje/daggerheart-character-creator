@@ -1,0 +1,10 @@
+<div class="items-selection-container">
+    @for (item of items; track item.id) {
+    <div class="item-container" [class.selected]="isSelected(item)" (click)="selectItem(item)">
+        <img class="selection-item" [src]="getAssetFile(item)" alt="{{item.label}} Image" />
+    </div>
+    }
+    @empty {
+        <li><em>No items found.</em></li>
+    }
+</div>

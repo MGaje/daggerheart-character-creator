@@ -14,6 +14,9 @@
         "@interfaces/*": [
             "app/interfaces/*"
         ],
+        "@character-creator/*": [
+            "app/character-creator/*"
+        ],
         "@enums": [
             "app/enums/index.ts"
         ],

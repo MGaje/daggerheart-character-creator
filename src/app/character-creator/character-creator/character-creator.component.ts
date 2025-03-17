@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
-import { CharacterCreatorWorkspaceMode } from '@enums';
+import { CharacterCreatorWorkspaceModeEnum } from '@enums';
+import { ClassService, FoundationService } from '@character-creator/services';
 
 @Component({
     selector: 'dh-cc-character-creator',
     templateUrl: './character-creator.component.html',
-    styleUrl: './character-creator.component.scss'
+    styleUrl: './character-creator.component.scss',
+    providers: [
+        FoundationService,
+        ClassService
+    ]
 })
 export class CharacterCreatorComponent {
-    public workspaceMode: CharacterCreatorWorkspaceMode = CharacterCreatorWorkspaceMode.ViewingList;
+    public workspaceMode: CharacterCreatorWorkspaceModeEnum = CharacterCreatorWorkspaceModeEnum.ViewingList;
 
     constructor() {
         // Empty.

@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { LayoutModule, BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 import { CharacterCreatorComponent } from './character-creator/character-creator.component';
@@ -15,6 +16,9 @@ import { CharacterCreatorWorkspaceViewListComponent } from './character-creator-
 import { CharacterCreatorWorkspaceCreateComponent } from './character-creator-workspace-create/character-creator-workspace-create.component';
 import { BasicInfoStepComponent } from './character-creator-workspace-create/steps/basic-info-step/basic-info-step.component';
 import { ClassStepComponent } from './character-creator-workspace-create/steps/class-step/class-step.component';
+import { SubclassStepComponent } from './character-creator-workspace-create/steps/subclass-step/subclass-step.component';
+import { LoadingComponent } from './loading/loading.component';
+import { ItemSelectionComponent } from './item-selection/item-selection.component';
 
 @NgModule({
     declarations: [
@@ -23,7 +27,10 @@ import { ClassStepComponent } from './character-creator-workspace-create/steps/c
         CharacterCreatorWorkspaceViewListComponent,
         CharacterCreatorWorkspaceCreateComponent,
         BasicInfoStepComponent,
-        ClassStepComponent
+        ClassStepComponent,
+        SubclassStepComponent,
+        LoadingComponent,
+        ItemSelectionComponent
     ],
     imports: [
         CommonModule,
@@ -35,6 +42,7 @@ import { ClassStepComponent } from './character-creator-workspace-create/steps/c
         MatDividerModule,
         MatInputModule,
         MatFormFieldModule,
+        MatProgressSpinnerModule,
         LayoutModule
     ],
     exports: [

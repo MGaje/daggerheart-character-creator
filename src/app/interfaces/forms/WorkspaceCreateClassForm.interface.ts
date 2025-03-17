@@ -1,6 +1,6 @@
 import { FormControl } from "@angular/forms";
-import { CharacterClass } from "@enums";
+import { CharacterClassEnum } from "@enums";
 
 export interface WorkspaceCreateClassForm {
-    class: FormControl<CharacterClass | undefined>
+    class: FormControl<CharacterClassEnum | undefined>
 }
